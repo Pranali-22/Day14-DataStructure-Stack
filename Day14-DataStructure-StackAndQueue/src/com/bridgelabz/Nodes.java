@@ -16,7 +16,6 @@ public class Nodes<T extends Comparable<T>> {
 	 private T key;
 	 private Nodes next;
 	 private Nodes head; 
-	 private Nodes tail;
 	 
 	 //Parameterized constructor
 	 public Nodes(T key) {
@@ -24,15 +23,38 @@ public class Nodes<T extends Comparable<T>> {
 	        this.key = key;
 	        this.next = null;
 	        this.head = null;
-	        this.tail = null;
 	    }
 	   
-	 //Non Parameterized constructor
+	 public T getKey() {
+		return key;
+	}
+
+	public void setKey(T key) {
+		this.key = key;
+	}
+
+	public Nodes getNext() {
+		return next;
+	}
+
+	public void setNext(Nodes next) {
+		this.next = next;
+	}
+
+	public Nodes getHead() {
+		return head;
+	}
+
+	public void setHead(Nodes head) {
+		this.head = head;
+	}
+
+	//Non Parameterized constructor
 	 public Nodes() {
 	    	this.key = null;
 	        this.next = null;
 	        this.head = null;
-	        this.tail = null;
+	 
 		}
 	
 	//Function to add node at start of linked list

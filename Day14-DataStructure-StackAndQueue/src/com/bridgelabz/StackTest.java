@@ -6,7 +6,9 @@ package com.bridgelabz;
 /**
  * @author Dell
  * 
- * Ability to create a Stack of
+ * Ability to peek and
+ * pop from the Stack
+ * till it is empty
  * 56->30->70
  *
  */
@@ -33,6 +35,16 @@ public class StackTest {
 	     System.out.println("Final Stack : ");
 	     stack.displayStack();
 
+	     while(stack.linkedList.getHead() != null) {
+		     //Display peek element of stack
+		     System.out.println("\nPeek of Stack : "+stack.peek());
+		     
+		     //Pop Element from Stack
+		     stack.pop();
+		     System.out.println("Final Stack after pop : ");
+		     stack.displayStack();
+	     }
+	     
 	}
 
 }

@@ -5,8 +5,8 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- * Ability to create a Queue of
- *	56->30->70
+ * Ability to dequeue 
+ * from the beginning
  *
  */
 public class QueueTest {
@@ -31,6 +31,15 @@ public class QueueTest {
 		 //Display all nodes of queue
 		 System.out.println("Nodes of queue :");
 		 queueList.displayQueue();
+		 
+		 //Dequeue all nodes
+		 while(queueList.linkedListForQueue.getHead() != null) {
+			 queueList.dequeue();
+			 System.out.println("Queue after dequeue ");
+			 queueList.displayQueue();
+		 }
+			 
+		 
 
 	}
 

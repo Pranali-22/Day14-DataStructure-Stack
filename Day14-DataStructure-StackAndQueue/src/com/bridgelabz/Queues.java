@@ -24,4 +24,16 @@ public class Queues implements IQueue{
 	public void displayQueue() {
 		linkedListForQueue.displayLinkedList();
 	}
+
+	//Function for dequeue
+	public void dequeue() {
+			if(linkedListForQueue == null) {
+				System.out.println("Empty Queue");
+			}
+			else {
+				Nodes temp = linkedListForQueue.getHead().getNext();			
+				linkedListForQueue.setHead(temp);
+				
+			}
+	}
 }

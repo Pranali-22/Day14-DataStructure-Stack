@@ -51,6 +51,14 @@ public class Nodes<T extends Comparable<T>> {
 		this.head = head;
 	}
 
+	public Nodes getTail() {
+		return tail;
+	}
+
+	public void setTail(Nodes tail) {
+		this.tail = tail;
+	}
+
 	//Non Parameterized constructor
 	 public Nodes() {
 	    	this.key = null;

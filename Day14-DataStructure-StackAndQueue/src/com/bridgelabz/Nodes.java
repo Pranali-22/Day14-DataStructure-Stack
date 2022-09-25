@@ -16,6 +16,8 @@ public class Nodes<T extends Comparable<T>> {
 	 private T key;
 	 private Nodes next;
 	 private Nodes head; 
+	 private Nodes tail; 
+	 
 	 
 	 //Parameterized constructor
 	 public Nodes(T key) {
@@ -91,5 +93,26 @@ public class Nodes<T extends Comparable<T>> {
         System.out.println();
     }
 
+    
+////Function to add node at end of linked list
+    public void addNodeAtEnd(Nodes newNode)
+    {
+    	if ( head == null){
+            head = newNode;
+            tail = newNode;
+            newNode.next = null;
+        }
+    	else{
+    		
+            tail.next = newNode;
+            newNode.next =null;
+            tail = tail.next;
+        }
+    	
+        System.out.println("\nLinked list after adding "+newNode.key);
+    	this.displayLinkedList();
+
+    }
+    
 
 }
